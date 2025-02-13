@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações da Formação no Polo São Luís</title>
+    <style>
+        body {
+            font-family: 'Montaser Arabic', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #3c3c3c;
+        }
+        h2, h1 {
+            text-align: center;
+        }
+        h1 {
+            color: #183eff;
+            font-weight: bold;
+            margin-bottom: 1.2em;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+        }
+        .ratings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+        @media (min-width: 768px) {
+            .ratings-container {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 900px;
+            }
+        }
+        .rating-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            font-style: italic;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.imgur.com/qVBzHbe.png" alt="Logo Cecate">
+    </div>
+    <h1>Avaliações da Formação no Polo São Luís</h1>
+    
+    <div class="ratings-container">
+        <script>
+            const avaliacoes = {
+                "Inscrição": 4.9,
+                "Divulgação": 4.8,
+                "Data do Evento": 4.8,
+                "Horário": 4.9,
+                "Duração": 4.8,
+                "Local": 4.6,
+                "Recepção": 4.9,
+                "Geral": 4.9
+            };
+
+            function desenharEstrelas(nota) {
+                let estrelas = "";
+                for (let i = 0; i < 4; i++) {
+                    estrelas += `<svg width="24" height="24" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/>
+                                  </svg>`;
+                }
+                estrelas += `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="half-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="50%" style="stop-color: gold;" />
+                                        <stop offset="50%" style="stop-color: gray;" />
+                                    </linearGradient>
+                                </defs>
+                                <polygon points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10" fill="url(#half-gold)"/>
+                              </svg>`;
+                return estrelas;
+            }
+
+
+            for (const [titulo, nota] of Object.entries(avaliacoes)) {
+                document.write(`
+                    <div class="rating-card">
+                        <h4>${titulo}</h4>
+                        <div class="stars">${desenharEstrelas(nota)}</div>
+                        <p style="margin: 10px 0 0; font-size: 18px; font-weight: bold;">Nota: ${nota.toFixed(1)}</p>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+    
+    <div class="container">
+        <h3>Indique dois aspectos que você mais gostou na atividade de formação do Cecate Nordeste:</h3>
+        <p>Temática das palestras:
+            Palestrantes.</p>
+            <p></p>
+            <p>apresentação do sete
+            passo a passo de inserção dos alunos no sistema</p>
+            <p>Gostei muito dos palestrantes, dos diálogos, das trocas de experiência </p>
+            <p>a explanação dos conteúdos 
+            a interação dos palestrantes </p>
+            <p>A forma de abordagem dos temas 
+             e as soluções.</p>
+            <p>novos conhecimentos e orientações. </p>
+            <p>Conhecer o sistema sete
+            Receber informações sobre o PNATE
+            </p>
+            <p>As explicações sobre o PNATE e as atualizações sobre o programa SETE</p>
+            <p>Os temas trabalhados e disponibilidade dos formadores </p>
+            <p>equipe qualificado 
+            conhecimento das diversas realidades dos municípios maranhenses</p>
+            <p>O Programa Sete,e a transparência do sistema.</p>
+            <p>SETE, CAPTACAO DE RECURSOS</p>
+            <p>Conteúdos explorados
+            Metodologia utilizada </p>
+            <p>Os palestrantes foram excelentes;
+            Abordagem dos temas</p>
+            <p>Os assuntos abordados, todos de excelência e grande relevância aos municípios; A acolhida e organização do evento.</p>
+            <p>A forma como foi exposta todas as temáticas e a condução do trabalho </p>
+            <p>tutoriais sobre o uso correto do SETE e programas financeiros </p>
+            <p>1- Informações atualizadas sobre transporte escolar.
+            2- técnicos com uma capacidade de de comunicação e linguagem clara. </p>
+            <p>Palestrantes 
+            Local </p>
+            <p>orientação de implantação do sistema sete</p>
+            <p>O momento prático onde foi acessado o sistema e o técnico fez etapa por etapa.</p>
+            <p>- Dinamismo na apresentação do tema
+            - Conhecimento dos palestrantes quanto aos assuntos propostos.</p>
+            <p>as informações 
+            e
+            E  a oportunidade de conhecer melhor o SETE</p>
+            <p>ótimos instrutores </p>
+            <p>as temáticas abordadas e como as mesmas foram organizadas</p>
+            <p>espaço aberto para os técnicos/secretários falarem das suas realidades e profissionais qualificados para abordar o assunto. </p>
+            <p>informações sobre o transporte escolar 
+            acesso e monitoramento do sete</p>
+            <p>Palestrantes e a didática utilizada pelos mesmos!</p>
+            <p>informações relevantes sobre o transporte escolar </p>
+            <p>reunião com cacs Fundeb 
+            participação dos conselhos de educação </p>
+            <p>conversação e a disponibilidade dos palestrantes </p>
+            <p>Domínio dos palestrantes e material objetivo</p>
+            <p>sete</p>
+            <p>evento muito bom</p>
+            <p>Objetividade e clareza</p>
+            <p>recepção </p>
+            <p>aprender sobre rota do Sete</p>
+            <p>comunicação clara</p>
+            <p>As orientações sobre o programa e os recursos destinados para o transporte escolar.</p>
+            <p>Situaçoes problemas do Programa Caminho da escola.
+            Prestação de contas </p>
+            <p>as orientações prestadas aos CACS;
+            as orientações quanto a alimentação e monitoramento dos sistemas</p>
+            <p>Apresentação pelos formadores foi excelente, os formadores são todos muito clarismaticos</p>
+            <p>SETE -Prencimento e e dúvidas 
+            FUNDE - COMO UTIZAR OS RECURSOS </p>
+            <p>a equipe foi muito esclarecedora e os assuntos abordados foram de bastante relevância. </p>
+            <p>A troca de conhecimentos e experiências – A interação com outros participantes permitiu um aprendizado enriquecedor, com troca de ideias e novas perspectivas sobre o tema abordado.</p>
+            
+    </div>
+    
+    <div class="container">
+        <h3>Indique dois aspectos que você menos gostou na atividade de formação do Cecate Nordeste:</h3>
+        <p>O tempo da formação:;
+            O tempo pouco da formação;
+            A data do evento.
+            </p>
+            <p></p>
+            <p>tempo curto 
+            </p>
+            <p>Não gostei de muita interferência de alguns participantes que parecem que já sabem de tudo, que parecem não acreditar em mudanças através de novas ações.</p>
+            <p>o atraso no início
+            </p>
+            <p>não houve </p>
+            <p>local e o som </p>
+            <p>Pouco tempo para explorar temas relevantes</p>
+            <p>O tempo foi muito pouco. Deveria ter uma oficina ensinando a utilização do SETE</p>
+            <p>O local do evento e o tempo que deveria ser maior. Talvez prolongar até o dia seguinte. </p>
+            <p>falta do ministério público 
+            ausência de alguns secretário de educação de alguns municípios presentes
+            </p>
+            <p>Nada a declarar</p>
+            <p>SEM COMENTÁRIOS</p>
+            <p>Foi tudo perfeito. </p>
+            <p></p>
+            <p>não existe </p>
+            <p></p>
+            <p>parte da geração de rotas, muitos dessas dicas não funcionariam na zona rural, sem internet </p>
+            <p>Sair satisfeita e com muitas informações. </p>
+            <p>Duração do encontro 
+            Discursões aleatórios </p>
+            <p></p>
+            <p></p>
+            <p>Nada identificado</p>
+            <p>Gostei, mas podemos melhorar ainda ma8s nos próximos o tempo do evento </p>
+            <p>atraso no início </p>
+            <p>entendendo q são muitas as informações, poderia sitar o espaço de tempo porém entendo q não seria fácil o prolongamento. estou satisfeito.</p>
+            <p>sinal da internet muito fraca. </p>
+            <p>localização e transporte</p>
+            <p>Local e internet do espaço utilizado.</p>
+            <p>trânsito e local</p>
+            <p></p>
+            <p>nada a reclamar </p>
+            <p>Local escolhido pequeno para os participantes e pouco tempo para os temas abordados</p>
+            <p></p>
+            <p>Nada a declarar</p>
+            <p>A localização do encontro </p>
+            <p>local </p>
+            <p>falhas técnicas no som</p>
+            <p> pouco tempo</p>
+            <p>O evento foi maravilhoso.</p>
+            <p>Não se aplica </p>
+            <p>a carga horária do evento.</p>
+            <p>tempo de formação de um dia é pouco para discutir a temática.</p>
+            <p>Todos os aspectos foram relevantes</p>
+            <p>o sinal da Internet ruim no local do evento  </p>
+            <p>O tempo poderia ter sido melhor distribuído, pois algumas atividades pareceram muito extensas, enquanto outras importantes foram abordadas rapidamente.
+            Falta de interação em alguns momentos – Em determinadas partes da formação, a dinâmica poderia ter sido mais participativa, incentivando maior envolvimento dos participantes.</p>
+            
+    </div>
+    
+    <div class="container">
+        <h3>Faça comentários ou sugestões que nos ajudem a melhorar os encontros com o Cecate Nordeste:</h3>
+        <p>Aumento da carga horária da formação;
+            Incluir outros temas inerentes a Lei do Fundeb.</p>
+            <p></p>
+            <p>programação de 2 dias
+            auxiliar mais a entrada ao sete</p>
+            <p>A sugestão é, que no próximo encontro seja em local mais amplo.</p>
+            <p>que tenha mais encontros com os municípios </p>
+            <p>Melhorar a divulgação e o acesso melhor </p>
+            <p>um local mais amplo e um som de melhor qualidade.</p>
+            <p>Aumentar de um para dois dias o evento</p>
+            <p>Que nas Formações, também tenha oficinas na utilização do sistema SETE</p>
+            <p>Um local mais amplo que atenda ao público envolvido. </p>
+            <p>o encontro foi muito enriquecedor, muitas dúvidas foram tiradas. sugiro que continue com as formações voltada para conselheiros do CASA- FUNDEB</p>
+            <p>Que tenham encontros,pois é de extrema importância.</p>
+            <p>UM DIA COM OFICINAS</p>
+            <p></p>
+            <p></p>
+            <p>Só parabenizar, gostei de tudo e aprendi muito com os palestrantes, as dúvidas foram sanadas.</p>
+            <p>Que continue fazendo esse trabalho maravilhoso </p>
+            <p>sugestões: formações semestrais via 
+            meet sobre as funcionalidades do SETE</p>
+            <p>1- Ter sempre cuidado com o local f de o evento, esse nosso se fosse num auditório maior com certeza daria mais pessoas. mas o local era maravilhoso e fomos bem recebidas</p>
+            <p>Foi um encontro muito importante para esclarecimento de como iremos trabalhar de forma organizada </p>
+            <p></p>
+            <p>Que abra mais vagas para os municípios </p>
+            <p>A abordagem do que foi proposto no encontro foi muito bem feita e esclarecedora. O técnicos se mostraram capacitados para os assuntos que lhes foram designados a apresentar. 
+            Estão todos de parabéns. </p>
+            <p>Já gostei de saber que acorreram eventos regionais vai nos ajudar bastante na formação dos conselheiros </p>
+            <p>foi ótimo </p>
+            <p>estou satisfeito, muitas dúvidas me foram esclarecidas. muito obrigado a toda a equipe 👏🏼👏🏼👏🏼👏🏼👏🏼</p>
+            <p>nada acrescentar.</p>
+            <p>almoço no local do evento </p>
+            <p>Encontro positivo, cheio de informações e orientações pertinentes ao bom funcionamento do Transporte Esxolar.</p>
+            <p>acessória ao sete</p>
+            <p></p>
+            <p>nada a falar </p>
+            <p>Pedir sugestão de temas para os próximos eventos.</p>
+            <p>mais formação sobre o assumto</p>
+            <p>Muito produtivo </p>
+            <p>Muito interessante e necessário </p>
+            <p>adorei espero que tenha mas ainda </p>
+            <p>Melhorar o espaço para melhor comodidade </p>
+            <p>parabéns pelo encontro </p>
+            <p>Poderia ser espandodo para realizar nas UREs.</p>
+            <p>Não se aplica </p>
+            <p>poderia aumentar a carga horária para que pudéssemos obter mais informações aos conselheiros.</p>
+            <p>Que veja a questão do tempo para discutir melhor.</p>
+            <p>Estão de parabéns, excelente trabalho. </p>
+            <p>na minha opinião poderia ter mais horas  de formação. </p>
+            <p>Mais dinâmicas interativas – Incluir atividades práticas, debates em grupo e estudos de caso pode tornar o aprendizado mais envolvente e participativo.</p>
+            
+    </div>
+</body>
+</html>
